@@ -1,0 +1,22 @@
+[
+    {
+        "title": "The Future of Web Development",
+        "content": "Web development is evolving rapidly, with new technologies and frameworks emerging regularly. In this article, we explore the future trends of web development and what developers need to know."
+    },
+    {
+        "title": "Understanding Asynchronous JavaScript",
+        "content": "Asynchronous JavaScript, including Promises and async/await, can be challenging for beginners. This post aims to demystify these concepts with clear examples and best practices."
+    },
+    {
+        "title": "Introduction to React Hooks",
+        "content": "React Hooks have transformed the way we write React components. This article provides an introduction to useState and useEffect, two of the most commonly used hooks."
+    },
+    {
+        "title": "Exploring Python for Data Science",
+        "content": "Python has become the go-to language for data science. This post explores how Python's libraries and frameworks make it an excellent choice for data analysis and machine learning projects."
+    },
+    {
+        "title": "Demystifying Machine Learning",
+        "content": "Machine learning is a field that is both fascinating and intimidating. In this article, we break down the basics of machine learning, its applications, and how to get started."
+    }
+]

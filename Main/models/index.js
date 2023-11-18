@@ -1,9 +1,17 @@
+require('dotenv').config();
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('tech_blog_db', 'username', 'password', {
-    host: 'localhost',
-    dialect: 'mysql',
-    logging: false
-});
+
+const sequelize = new Sequelize(
+    process.env.DB_NAME,   
+    process.env.DB_USER,     
+    process.env.DB_PASSWORD, 
+    {
+        host: process.env.DB_HOST, 
+        dialect: 'mysql',         
+        logging: false            
+    }
+);
+
 
 const User = require('./User')(sequelize, Sequelize.DataTypes);
 const Post = require('./Post')(sequelize, Sequelize.DataTypes);
