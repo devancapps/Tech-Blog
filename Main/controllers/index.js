@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
-const dashboardRoutes = require('./dashboardRoutes');
+// const dashboardRoutes = require('./dashboardRoutes');
 
 // Configure routes
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
-router.use('/dashboard', dashboardRoutes);
+// router.use('/dashboard', dashboardRoutes);
 
 // Handle 404 errors for undefined routes
 router.use((req, res) => {
