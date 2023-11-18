@@ -1,0 +1,25 @@
+<section class="dashboard">
+    <h1>Welcome to Your Dashboard</h1>
+    <div class="dashboard-actions">
+        <a href="/dashboard/new" class="btn btn-primary">Create New Post</a>
+    </div>
+
+    {{#if userPosts}}
+        <h2>Your Blog Posts</h2>
+        <div class="posts-list">
+            {{#each userPosts as |post|}}
+                <article class="post">
+                    <h3>{{post.title}}</h3>
+                    <p>Posted on {{formatDate post.createdAt}}</p>
+                    <div>{{post.summary}}</div>
+                    <div class="post-actions">
+                        <a href="/dashboard/edit/{{post.id}}" class="btn btn-secondary">Edit</a>
+                        <a href="/dashboard/delete/{{post.id}}" class="btn btn-danger">Delete</a>
+                    </div>
+                </article>
+            {{/each}}
+        </div>
+    {{else}}
+        <p>You have not created any posts yet.</p>
+    {{/if}}
+</section>

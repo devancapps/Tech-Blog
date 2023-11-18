@@ -1,0 +1,9 @@
+{{#each posts as |post|}}
+    <article class="post">
+        <h2><a href="/posts/{{post.id}}">{{post.title}}</a></h2>
+        <p>Posted by {{post.author.username}} on {{formatDate post.createdAt}}</p>
+        <div>{{post.summary}}</div>
+    </article>
+{{else}}
+    <p>Sign up or login to view posts!</p>
+{{/each}}
