@@ -30,8 +30,15 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         timestamps: true,
-        freezeTableName: true
+        freezeTableName: true,
+        hooks: async (user) => {
+            user.password = await bcrypt.hash(user.password, 8);
+        }
     });
+
+    User.prototype.checkPassword = function(password) {
+        return bcrypt.compare(password, this.password);
+    }
 
     User.associate = (models) => {
         User.hasMany(models.Post, {

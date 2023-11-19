@@ -1,12 +1,12 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#tvshow-name').value.trim();
-  const needed_funding = document.querySelector('#tvshow-funding').value.trim();
-  const description = document.querySelector('#tvshow-desc').value.trim();
+  const name = document.querySelector('#post-name').value.trim();
+  const needed_funding = document.querySelector('#post-funding').value.trim();
+  const description = document.querySelector('#post-desc').value.trim();
 
   if (name && needed_funding && description) {
-    const response = await fetch(`/api/tvshows`, {
+    const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({ name, needed_funding, description }),
       headers: {
@@ -17,7 +17,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to create tvshow');
+      alert('Failed to create post');
     }
   }
 };
@@ -26,22 +26,22 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/tvshows/${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to delete tvshow');
+      alert('Failed to delete post');
     }
   }
 };
 
 document
-  .querySelector('.new-tvshow-form')
+  .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.tvshow-list')
+  .querySelector('.post-list')
   .addEventListener('click', delButtonHandler);

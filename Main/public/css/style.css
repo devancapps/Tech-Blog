@@ -57,7 +57,7 @@ button:hover, .no-button:hover {
 }
 
 /* Individual TV Show Styling */
-.tvshow {
+.post {
   background-color: #263238; /* Dark base for contrast */
   color: #ffe0b2; /* Light orange for text */
   padding: 20px;
@@ -67,7 +67,7 @@ button:hover, .no-button:hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.tvshow:hover {
+.post:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -129,7 +129,7 @@ footer p {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  header, .tvshow, nav a {
+  header, .post, nav a {
     padding: 0 20px;
   }
 }
