@@ -15,14 +15,25 @@ module.exports = (sequelize, DataTypes) => {
         },
         createdAt: {
             type: DataTypes.DATE,
+            field: 'created_at',
             defaultValue: DataTypes.NOW
         },
         updatedAt: {
             type: DataTypes.DATE,
+            field: 'updated_at',
             defaultValue: DataTypes.NOW
+        },
+        userId: {
+            type: DataTypes.INTEGER,
+            field: 'user_id',
+            references: {
+                model: 'users',
+                key: 'id'
+            },
+            onDelete: 'CASCADE'
         }
     }, {
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true
     });
 
