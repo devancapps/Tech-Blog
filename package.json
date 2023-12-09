@@ -4,7 +4,8 @@
   "description": "## Introduction Welcome to the Tech Blog, a dynamic space where developers can share, learn, and innovate. Crafted with a focus on MVC architecture and modern web technologies, this platform provides an interactive and engaging environment for all things tech.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
