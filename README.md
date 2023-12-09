@@ -6,11 +6,7 @@ Welcome to the Tech Blog, a dynamic space where developers can share, learn, and
 ## Key Features
 - **User Authentication**: Ensuring security and ease of access, our platform offers a streamlined sign-up and login process.
 
-- **Responsive Design**: Our interface is designed to be user-friendly and adaptable across various devices, ensuring a seamless experience.
-
 - **Blogging Functionality**: Users can easily create, edit, and delete blog posts, making content management a breeze.
-
-- **Interactive Comments**: Engage with the community by commenting on posts, fostering a vibrant and collaborative atmosphere.
 
 - **Personal Dashboard**: A dedicated space for users to manage their posts and interact with the community.
 
@@ -29,7 +25,7 @@ Welcome to the Tech Blog, a dynamic space where developers can share, learn, and
 5. Start the application and explore.
 
 ## Contribution
-We welcome contributions. Feel free to fork the repository and submit your pull requests for review.
+Feel free to fork the repository and submit your pull requests for review.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
